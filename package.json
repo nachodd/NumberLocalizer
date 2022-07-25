@@ -1,6 +1,5 @@
 {
-    "name": "@nachodd/number-localizer",
-    "private": false,
+    "name": "number-localizer",
     "version": "1.0.0",
     "type": "module",
     "files": [
