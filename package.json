@@ -1,0 +1,43 @@
+{
+    "name": "numberlocalizer",
+    "private": false,
+    "version": "1.0.0",
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/number-localizer.umd.js",
+    "module": "./dist/number-localizer.es.js",
+    "exports": {
+        ".": {
+            "import": "./dist/number-localizer.es.js",
+            "require": "./dist/number-localizer.umd.js"
+        }
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build && tsc --emitDeclarationOnly && mv dist/main.d.ts dist/index.d.ts",
+        "preview": "vite preview"
+    },
+    "types": "./dist/index.d.ts",
+    "devDependencies": {
+        "@types/big.js": "^6.1.5",
+        "@types/node": "^18.6.1",
+        "@typescript-eslint/eslint-plugin": "^5.31.0",
+        "@typescript-eslint/parser": "^5.31.0",
+        "eslint": "^8.0.1",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-standard": "^17.0.0",
+        "eslint-plugin-import": "^2.25.2",
+        "eslint-plugin-n": "^15.0.0",
+        "eslint-plugin-promise": "^6.0.0",
+        "path": "^0.12.7",
+        "typescript": "^4.6.4",
+        "vite": "^3.0.0",
+        "vite-plugin-eslint": "^1.7.0"
+    },
+    "dependencies": {
+        "big.js": "^6.2.1"
+    },
+    "license": "MIT"
+}
