@@ -1,5 +1,5 @@
 {
-    "name": "numberlocalizer",
+    "name": "@nachodd/number-localizer",
     "private": false,
     "version": "1.0.0",
     "type": "module",
@@ -20,6 +20,22 @@
         "preview": "vite preview"
     },
     "types": "./dist/index.d.ts",
+    "repository": {
+    "type": "git",
+        "url": "git+https://github.com/nachodd/NumberLocalizer.git"
+    },
+    "keywords": [
+        "javascript",
+        "typescript",
+        "Locale",
+        "Number",
+        "Number Localization",
+        "Decimal Localization",
+        "Internationalization",
+        "Number Internationalization",
+        "i18n",
+        "Number i18n"
+    ],
     "devDependencies": {
         "@types/big.js": "^6.1.5",
         "@types/node": "^18.6.1",
