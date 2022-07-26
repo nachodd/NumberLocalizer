@@ -1,6 +1,10 @@
-# 🏁 number-localizaer
+# 🌎 number-localizer
 
-A library that helps you localize numbers. If you have a large number (greater `Number.MAX_SAFE_INTEGER`) or a number with a bunch of decimals and you try to format it using `Intl.NumberFormat` and / or `Number.toLocaleString("...")`, precision will be lost.
+A library that helps you localize numbers.
+
+- _Hey! what about `Number(...).toLocaleString(localeCode)`?_ You can use it, but the number should be on the range of `Number.MIN_SAFE_INTEGER` and `Number.MAX_SAFE_INTEGER`. Outside of this range it won't work.
+- _But can't I use `BigInt(...).toLocaleString(localeCode)` for that?_ Technically, yes. But it doesn't support decimal numbers.
+- _But you can still use `Intl.NumberFormat(localeCode).format(...)` to format floating point numbers, no?_ You can, but at some point you will lost precision. [More about this](https://floating-point-gui.de/).
 
 ## 📦 Installation
 
@@ -17,18 +21,18 @@ yarn add number-localizer
 const locale = "es-AR"
 const parser = new LocaleParser(locale)
 
-// create a big number. Number SHOULD be entered as String
+// create a big number. Input number SHOULD be a String
 const target = '1121212133213134314145624324'
 console.log(`Is it safe to parse "${target}"?`, Number.isSafeInteger(Number(target))) // false
 
-const res_error = new Intl.NumberFormat(locale).format(target)
-const res_ok = parser.toLocaleString(target)
+const resError = new Intl.NumberFormat(locale).format(target)
+const resOk = parser.toLocaleString(target)
 
 console.log("Localize using traditional way: ", resError) // '1.121.212.133.213.134.300.000.000.000'
-console.log("Localize using NumberLocalizer: ", resOk) //  '1.121.212.133.213.134.314.145.624.324'
+console.log("Localize using NumberLocalizer: ", resOk) // '1.121.212.133.213.134.314.145.624.324'
 ```
 
-## 🔎 Demos
+## 🔎 Test cases
 
 ```js
 const targets = []
