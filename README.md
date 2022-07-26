@@ -1,6 +1,6 @@
 # 🌎 number-localizer
 
-A library that helps you localize numbers.
+A library that helps you format numbers according to a given locale.
 
 - _Hey! what about `Number(...).toLocaleString(localeCode)`?_ You can use it, but the number should be on the range of `Number.MIN_SAFE_INTEGER` and `Number.MAX_SAFE_INTEGER`. Outside of this range it won't work.
 - _But can't I use `BigInt(...).toLocaleString(localeCode)` for that?_ Technically, yes. But it doesn't support decimal numbers.
